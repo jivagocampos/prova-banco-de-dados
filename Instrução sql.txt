@@ -1,0 +1,18 @@
+create database prova;
+use prova;
+
+create table trajeto ( 
+   id int  not null auto_increment, 
+   taxi_id int,
+   data date, 
+   longitude varchar(15), 
+   latitude varchar(15), 
+   primary key(id));
+
+create table trajeto_indice ( 
+   id int not null auto_increment, 
+   taxi_id int,
+   data date, 
+   longitude varchar(15), 
+   latitude varchar(15), 
+   primary key(id));
