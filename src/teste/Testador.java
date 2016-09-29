@@ -19,20 +19,17 @@ public class Testador {
         String longitude = "116.18613";
         String latitude = "39.914";
           
-        
         System.out.println(String.format("Sem indice longitude: %s  latitude: %s  ", longitude, latitude));
         Date start = new Date();
         TrajetoDao.listTrajeto(connection, longitude, latitude);
         Date end = new Date();
-        System.out.println(String.format("Total tempo %s milliseconds", end.getTime() - start.getTime()));
+        System.out.println(String.format("total tempo %s milliseconds", end.getTime() - start.getTime()));
         System.out.println(String.format("Com indice longitude: %s  latitude: %s  ", longitude, latitude));
         start = new Date();
         Trajeto.listTrajetoIndice(connection, longitude, latitude);
         end = new Date();
-        System.out.println(String.format("Total tempo %s milliseconds", end.getTime() - start.getTime()));
-       
-
-        
+        System.out.println(String.format("total tempo %s milliseconds", end.getTime() - start.getTime()));
+               
         System.out.println("\n");
         
         System.out.println("100 mil registros");
@@ -46,10 +43,8 @@ public class Testador {
         start = new Date();
         TrajetoDao.listTrajetoIndice(connection, longitude, latitude);
         end = new Date();
-        System.out.println(String.format("Total tempo %s milliseconds", end.getTime() - start.getTime()));
+        System.out.println(String.format("total tempo %s milliseconds", end.getTime() - start.getTime()));
         System.out.println("");
         System.out.println("\n");
-        
-       
     }
 }
