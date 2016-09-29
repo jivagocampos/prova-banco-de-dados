@@ -16,3 +16,6 @@ create table trajeto_indice (
    longitude varchar(15), 
    latitude varchar(15), 
    primary key(id));
+
+alter table trajetoindice
+add indice (longitude, latitude);
